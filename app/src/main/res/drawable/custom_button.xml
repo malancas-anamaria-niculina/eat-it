@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:tools="http://schemas.android.com/tools" xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:state_selected="false">
+        <shape android:shape="rectangle">
+            <solid android:color="#FFFFFF"/>
+            <stroke android:color="@color/cardview_shadow_end_color" tools:ignore="PrivateResource" />
+            <corners android:radius="25dp"/>
+        </shape>
+    </item>
+
+    <item android:state_selected="true">
+    <shape android:shape="rectangle">
+        <solid android:color="#44BD32"/>
+        <corners android:radius="25dp"/>
+        <stroke android:color="@color/cardview_shadow_end_color" tools:ignore="PrivateResource" />
+    </shape>
+    </item>
+
+</selector>

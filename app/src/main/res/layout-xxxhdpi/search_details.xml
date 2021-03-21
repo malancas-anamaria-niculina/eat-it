@@ -1,0 +1,243 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/searchResultImage"
+                android:layout_width="match_parent"
+                android:layout_height="300dp"
+                app:srcCompat="@android:drawable/screen_background_dark_transparent" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="250dp"
+                android:background="@drawable/custom_style"
+                android:gravity="center"
+                android:orientation="vertical"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.0">
+
+                <TextView
+                    android:id="@+id/nutrientsText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingBottom="10dp"
+                    android:paddingEnd="220dp"
+                    android:paddingStart="0dp"
+                    android:paddingTop="10dp"
+                    android:text="@string/nutrients"
+                    android:textColor="#44BD32"
+                    android:textSize="20sp"
+                    />
+
+                <RelativeLayout
+                    android:layout_width="330dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="0dp"
+                    android:background="@drawable/custom_input"
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                    android:paddingTop="10dp">
+
+                    <ProgressBar
+                        android:id="@+id/proteinProgressBar"
+                        style="?android:attr/progressBarStyle"
+                        android:layout_width="100dp"
+                        android:layout_height="90dp"
+                        android:indeterminateOnly="false"
+                        android:paddingEnd="5dp"
+                        android:paddingStart="5dp"
+                        android:progress="60"
+                        android:progressDrawable="@drawable/circle" />
+
+                    <ProgressBar
+                        android:id="@+id/carbohydratesProgressBar"
+                        style="?android:attr/progressBarStyle"
+                        android:layout_width="100dp"
+                        android:layout_height="90dp"
+                        android:layout_toEndOf="@id/proteinProgressBar"
+                        android:foregroundGravity="center"
+                        android:indeterminateOnly="false"
+                        android:paddingEnd="5dp"
+                        android:paddingStart="5dp"
+                        android:progress="60"
+                        android:progressDrawable="@drawable/circle" />
+
+                    <ProgressBar
+                        android:id="@+id/fiberProgressBar"
+                        style="?android:attr/progressBarStyle"
+                        android:layout_width="100dp"
+                        android:layout_height="90dp"
+                        android:layout_gravity="center"
+                        android:layout_toEndOf="@id/carbohydratesProgressBar"
+                        android:indeterminateOnly="false"
+                        android:paddingEnd="5dp"
+                        android:paddingStart="5dp"
+                        android:progress="60"
+                        android:progressDrawable="@drawable/circle"
+                        android:tooltipText="display" />
+
+                    <TextView
+                        android:id="@+id/proteinProcTextView"
+                        android:layout_width="100dp"
+                        android:layout_height="90dp"
+                        android:gravity="center"
+                        android:text="@string/_60"
+                        android:textColor="#44BD32"
+                        android:textSize="17sp" />
+
+                    <TextView
+                        android:id="@+id/carbohydratesProcTextView"
+                        android:layout_width="100dp"
+                        android:layout_height="90dp"
+                        android:layout_toEndOf="@id/proteinProcTextView"
+                        android:gravity="center"
+                        android:text="@string/_60"
+                        android:textColor="#44BD32"
+                        android:textSize="17sp" />
+
+                    <TextView
+                        android:id="@+id/fiberProcTextView"
+                        android:layout_width="100dp"
+                        android:layout_height="90dp"
+                        android:layout_toEndOf="@id/carbohydratesProcTextView"
+                        android:gravity="center"
+                        android:text="@string/_60"
+                        android:textColor="#44BD32"
+                        android:textSize="17sp" />
+
+                    <TextView
+                        android:id="@+id/proteinTextView"
+                        android:layout_width="100dp"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/proteinProgressBar"
+                        android:text="@string/proteins"
+                        android:textAlignment="center"
+                        android:textSize="15sp" />
+
+                    <TextView
+                        android:id="@+id/carbohydratesTextView"
+                        android:layout_width="100dp"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/carbohydratesProgressBar"
+                        android:layout_toEndOf="@id/proteinTextView"
+                        android:text="@string/carbohydrates"
+                        android:textAlignment="center"
+                        android:textSize="15sp" />
+
+                    <TextView
+                        android:id="@+id/fiberTextView"
+                        android:layout_width="100dp"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/fiberProcTextView"
+                        android:layout_toEndOf="@id/carbohydratesProgressBar"
+                        android:text="@string/fibers"
+                        android:textAlignment="center"
+                        android:textSize="15sp" />
+
+                    <androidx.constraintlayout.widget.Guideline
+                        android:id="@+id/guideline2"
+                        android:layout_width='100dp'
+                        android:layout_height="match_parent"
+                        android:orientation="vertical" />
+
+
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal"
+                    android:gravity="center"
+                    android:paddingTop="20dp"
+                    >
+                    <RelativeLayout
+                        android:layout_width="120dp"
+                        android:layout_height="110dp"
+                        android:background="@drawable/custom_input">
+
+                        <TextView
+                            android:layout_width="120dp"
+                            android:layout_height="110dp"
+                            android:text="@string/calories"
+                            android:textSize="16sp"
+                            android:paddingTop="5dp"
+                            android:paddingHorizontal="18dp"
+                            />
+
+                        <TextView
+                            android:id="@+id/caloriesTextView"
+                            android:layout_width="120dp"
+                            android:layout_height="110dp"
+                            android:text="@string/_0"
+                            android:textAlignment="center"
+                            android:gravity="center"
+                            android:textSize="25sp"
+                            />
+
+                    </RelativeLayout>
+
+                    <TextView
+                        android:layout_width="30dp"
+                        android:layout_height="match_parent"/>
+
+                    <RelativeLayout
+                        android:layout_width="120dp"
+                        android:layout_height="110dp"
+                        android:background="@drawable/custom_input">
+                        <TextView
+                            android:layout_width="120dp"
+                            android:layout_height="110dp"
+                            android:text="@string/fat"
+                            android:paddingTop="5dp"
+                            android:paddingHorizontal="18dp"
+                            android:textSize="16sp"
+                            />
+
+                        <TextView
+                            android:id="@+id/fatTextView"
+                            android:layout_width="120dp"
+                            android:layout_height="110dp"
+                            android:text="@string/_0"
+                            android:textAlignment="center"
+                            android:gravity="center"
+                            android:textSize="25sp"
+                            />
+                    </RelativeLayout>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <ProgressBar
+                android:id="@+id/progressBar"
+                style="?android:attr/progressBarStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:visibility="invisible"/>
+        </RelativeLayout>
+    </ScrollView>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
